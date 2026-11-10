@@ -8,7 +8,7 @@ Is the line that ensures the captured environment is not overwritten during exte
 `(mapcar #'identity (list :closure params body env))` is where the environment is captured during closures
 When a lambda is defined inside a nested `let` expression, the `let` parents get evaluated and put into the new environment that is extended into the `lambda` evaluation's environment.
 
-If `apply-closure` extended the environment of the caller, instead of the one captured in the closure then it would follow dynamic scoping. In this case `make-closure` would omit the environment it was defined in instead of saving it in the closure and `apply-closure` would have the `env` parameter instead and capture the environment of the function caller when it is called.
+If `apply-closure` extended the environment of the caller, instead of the one captured in the closure then it would follow dynamic scoping. In this case `make-closure` would omit the environment it was defined in instead of saving it in the closure and `apply-closure` would have the `env` parameter instead and capture the environment of the function caller when it's called.
 
 ```
 (eval-expr '(let ((x 2))
