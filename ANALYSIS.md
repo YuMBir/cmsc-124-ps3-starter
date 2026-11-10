@@ -27,4 +27,4 @@ When the function `f` is evaluated the program looks through the environment for
 ```
 (t (apply-closure(eval-expr(car expr) env) (eval-operands (cdr expr) env)))
 ```
-Where it is evaluated using `apply-closure`
+Where it's evaluated using `apply-closure`
